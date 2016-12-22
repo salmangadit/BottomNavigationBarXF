@@ -30,6 +30,14 @@ namespace BottomBar.XamarinForms
 		{
 			OnCurrentPageChanged();
 		}
+
+	    public void ForceRedraw()
+	    {
+	        foreach (var child in Children)
+	        {
+	            child.ForceLayout();
+	        }
+	    }
 	}
 }
 
